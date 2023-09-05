@@ -1,0 +1,13 @@
+image: python:3.7
+test:
+    script:
+        - pip install requests
+        - pip install urllib3
+        - pip install datetime
+        - pip install argparse
+        - pip install coverage
+        - python3 WeatherForecast_unittest.py
+        - coverage run --branch WeatherForecast_unittest.py
+        - coverage report -m
+        
+        
